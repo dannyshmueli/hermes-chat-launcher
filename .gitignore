@@ -1,0 +1,8 @@
+# macOS noise
+.DS_Store
+
+# Generated iconset during local builds
+dist/*.iconset/
+
+# Logs
+*.log
