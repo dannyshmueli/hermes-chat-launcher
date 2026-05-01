@@ -19,6 +19,16 @@ Double-click `Hermes Chat.app` and it will:
 
 This is intentionally not a fork of Open WebUI. It uses stock Open WebUI and only handles local macOS startup orchestration.
 
+## Quick install with Hermes
+
+Copy this prompt into Hermes:
+
+```text
+Install Hermes Chat Launcher from https://github.com/dannyshmueli/hermes-chat-launcher on my Mac. Clone the repo, run ./scripts/install-macos-app.sh, verify /Applications/Hermes Chat.app exists, verify the icon is installed, launch it once, and confirm Hermes API and Open WebUI are reachable.
+```
+
+Hermes will install the launcher app, start the local services, and open the chat UI.
+
 ## Requirements
 
 - macOS
