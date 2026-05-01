@@ -21,12 +21,20 @@ This is intentionally not a fork of Open WebUI. It uses stock Open WebUI and onl
 
 Hermes Chat Launcher uses Open WebUI as the front end and points it at Hermes Agent's local OpenAI-compatible API. In practice: Open WebUI provides the chat UI; Hermes provides the agent behind it.
 
+## Why this exists
+
+This project was inspired by people wiring Hermes into Open WebUI manually.
+
+Hermes is powerful, but not everyone wants to live in the terminal. Open WebUI gives Hermes a clean ChatGPT-style interface, but the setup has a few moving pieces: Hermes API server, environment config, Docker, Open WebUI, and the local browser app.
+
+Hermes Chat Launcher packages that setup into one small macOS app. Double-click it and it starts the local services, opens the chat UI, and lets you talk to Hermes from a dedicated window.
+
 ## Quick install with Hermes
 
 Copy this prompt into Hermes:
 
 ```text
-Install Hermes Chat Launcher from https://github.com/dannyshmueli/hermes-chat-launcher on my Mac. Clone the repo, run ./scripts/install-macos-app.sh, verify /Applications/Hermes Chat.app exists, verify the icon is installed, launch it once, and confirm Hermes API and Open WebUI are reachable.
+Install Hermes Chat Launcher from https://github.com/dannyshmueli/hermes-chat-launcher on my Mac. If Open WebUI is not already installed, install it with Docker using the launcher defaults. Clone the repo, run ./scripts/install-macos-app.sh, verify /Applications/Hermes Chat.app exists, verify the icon is installed, launch it once, and confirm Hermes API and Open WebUI are reachable.
 ```
 
 Hermes will install the launcher app, start the local services, and open the chat UI.
@@ -89,6 +97,8 @@ Logs:
 ```
 
 ## Open WebUI configuration
+
+You do not need to install Open WebUI separately if you use the launcher. On first run, the launcher creates the Docker volume and starts the upstream Open WebUI container with Hermes as its OpenAI-compatible backend.
 
 The launcher creates/runs this Docker container if it does not exist:
 
