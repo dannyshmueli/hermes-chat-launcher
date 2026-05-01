@@ -8,7 +8,7 @@
   <img src="assets/hermes-chat-icon.png" alt="Hermes Chat app icon" width="96" height="96">
 </p>
 
-A tiny macOS launcher for running Open WebUI as a local chat UI for Hermes Agent.
+A tiny macOS launcher for running [Open WebUI](https://openwebui.com/) as a local chat UI for Hermes Agent.
 
 Double-click `Hermes Chat.app` and it will:
 
@@ -18,6 +18,12 @@ Double-click `Hermes Chat.app` and it will:
 4. Open `http://localhost:3000` in your browser.
 
 This is intentionally not a fork of Open WebUI. It uses stock Open WebUI and only handles local macOS startup orchestration.
+
+## What is Open WebUI?
+
+[Open WebUI](https://openwebui.com/) is a self-hosted AI chat interface. It gives you a polished ChatGPT-like web app for talking to local or remote models through providers such as Ollama and OpenAI-compatible APIs.
+
+Hermes Chat Launcher uses Open WebUI as the front end and points it at Hermes Agent's local OpenAI-compatible API. In practice: Open WebUI provides the chat UI; Hermes provides the agent behind it.
 
 ## Quick install with Hermes
 
