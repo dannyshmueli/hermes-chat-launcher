@@ -23,7 +23,7 @@ Hermes Chat Launcher uses Open WebUI as the front end and points it at Hermes Ag
 
 ## Why this exists
 
-This project was inspired by people wiring Hermes into Open WebUI manually.
+This project was inspired by [Julian Goldie's X post about using Open WebUI with Hermes](https://x.com/JulianGoldieSEO/status/2048440694382145776) and by people wiring Hermes into Open WebUI manually.
 
 Hermes is powerful, but not everyone wants to live in the terminal. Open WebUI gives Hermes a clean ChatGPT-style interface, but the setup has a few moving pieces: Hermes API server, environment config, Docker, Open WebUI, and the local browser app.
 
