@@ -31,6 +31,25 @@ Then open:
 /Applications/Hermes Chat.app
 ```
 
+The launcher opens your existing Chrome PWA/app shortcut when present:
+
+```text
+~/Applications/Chrome Apps.localized/Hermes Workspace.app
+```
+
+If that app is not present, it falls back to a new Chrome app-style window with:
+
+```bash
+open -na "Google Chrome" --args --app="http://localhost:3000"
+```
+
+You can override the Chrome app target:
+
+```bash
+CHROME_APP_NAME="Open WebUI" ~/bin/hermes-chat-launcher.sh
+CHROME_APP_PATH="$HOME/Applications/Chrome Apps.localized/My App.app" ~/bin/hermes-chat-launcher.sh
+```
+
 If macOS blocks the unsigned app, right-click it once and choose **Open**.
 
 ## What gets installed

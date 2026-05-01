@@ -5,6 +5,8 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/us
 
 APP_NAME="Hermes Chat"
 OPENWEBUI_URL="http://localhost:3000"
+CHROME_APP_NAME="${CHROME_APP_NAME:-Hermes Workspace}"
+CHROME_APP_PATH="${CHROME_APP_PATH:-$HOME/Applications/Chrome Apps.localized/${CHROME_APP_NAME}.app}"
 HERMES_HEALTH_URL="http://127.0.0.1:8642/health"
 HERMES_MODELS_URL="http://127.0.0.1:8642/v1/models"
 LOG_DIR="$HOME/.hermes/logs"
@@ -135,8 +137,13 @@ ensure_openwebui_container() {
 }
 
 open_chat() {
-  log "Opening $OPENWEBUI_URL"
-  /usr/bin/open "$OPENWEBUI_URL"
+  if [ -d "$CHROME_APP_PATH" ]; then
+    log "Opening Chrome app: $CHROME_APP_PATH"
+    /usr/bin/open -n "$CHROME_APP_PATH" || /usr/bin/open "$CHROME_APP_PATH"
+  else
+    log "Chrome app not found at $CHROME_APP_PATH; opening URL in a new Chrome app-style window"
+    /usr/bin/open -na "Google Chrome" --args --app="$OPENWEBUI_URL" || /usr/bin/open "$OPENWEBUI_URL"
+  fi
   notify "Hermes Chat is ready"
 }
 
