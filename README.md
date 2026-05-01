@@ -1,5 +1,13 @@
 # Hermes Chat Launcher
 
+<p align="center">
+  <img src="assets/readme-hero.png" alt="Hermes Chat Launcher hero image showing the app icon connected to a local chat window" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/hermes-chat-icon.png" alt="Hermes Chat app icon" width="96" height="96">
+</p>
+
 A tiny macOS launcher for running Open WebUI as a local chat UI for Hermes Agent.
 
 Double-click `Hermes Chat.app` and it will:
@@ -93,6 +101,7 @@ The icon is generated art for this launcher: a Hermes wing plus AI/chat gateway 
 macOS icon notes:
 
 - Source PNG: `assets/hermes-chat-icon.png`
+- README hero: `assets/readme-hero.png`
 - App icon: `assets/HermesChat.icns`
 - Generated via Apple's `iconutil` from a `.iconset` with standard sizes up to `512x512@2x`.
 
