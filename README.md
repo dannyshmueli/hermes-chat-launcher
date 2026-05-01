@@ -1,12 +1,12 @@
 # Hermes Chat Launcher
-
-<p align="center">
-  <img src="assets/readme-hero.png" alt="Hermes Chat Launcher hero image showing the app icon connected to a local chat window" width="100%">
-</p>
-
 <p align="center">
   <img src="assets/hermes-chat-icon.png" alt="Hermes Chat app icon" width="96" height="96">
 </p>
+
+<img width="553" height="410" alt="image" src="https://github.com/user-attachments/assets/d2e5f698-b017-4d10-bdbd-01d5d28a9f0e" />
+<img width="1054" height="627" alt="Screenshot 2026-05-01 at 8 49 43" src="https://github.com/user-attachments/assets/ec3f14af-4bc5-415f-95d1-4faacc4fb56a" />
+<img width="1066" height="633" alt="Screenshot 2026-05-01 at 8 50 12" src="https://github.com/user-attachments/assets/d7e6bab1-a7db-49e2-9eab-4f219f787087" />
+
 
 A tiny macOS launcher for running [Open WebUI](https://openwebui.com/) as a local chat UI for Hermes Agent.
 
